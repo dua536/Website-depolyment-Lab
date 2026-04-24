@@ -3,16 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* BODY BACKGROUND (IMAGE + OVERLAY) */
+/* BODY */
 body {
-    height: 100vh;
-    background: 
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("../images/background.jpg") no-repeat center center/cover;
-    color: white;
+    background: #f7f9fc;
 }
 
 /* NAVBAR */
@@ -20,59 +16,112 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 25px 80px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
+    color: #ff6600;
 }
 
-/* NAV LINKS */
 nav a {
-    color: white;
-    margin: 0 15px;
+    margin: 0 12px;
     text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
+    color: #333;
+    font-size: 14px;
 }
 
 nav a:hover {
-    color: #ff4da6;
+    color: #ff6600;
 }
 
-/* HERO SECTION */
+/* BUTTON NAV */
+.signup {
+    background: #ff6600;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+/* HERO */
 .hero {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 80vh;
-    text-align: center;
+    justify-content: space-between;
+    padding: 60px 80px;
 }
 
-/* CONTENT */
-.content h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
+/* LEFT */
+.left {
+    width: 50%;
 }
 
-.content p {
-    font-size: 20px;
-    margin-bottom: 25px;
+.left h3 {
+    color: #888;
+    font-size: 16px;
 }
 
-/* BUTTON */
+.left h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    color: #222;
+}
+
+.left span {
+    color: #ff6600;
+}
+
+.left p {
+    font-size: 16px;
+    color: #555;
+    margin: 20px 0;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 20px;
+}
+
 .btn {
-    background: white;
-    color: #6a0dad;
     padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 14px;
 }
 
-.btn:hover {
-    background: #ff4da6;
+.primary {
+    background: #ff6600;
     color: white;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #333;
+}
+
+/* IMAGE */
+.right img {
+    width: 420px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .right img {
+        margin-top: 20px;
+        width: 300px;
+    }
 }
