@@ -46,12 +46,13 @@ nav a:hover {
     border-radius: 6px;
 }
 
-/* HERO */
 .hero {
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 60px 80px;
+    padding: 0 80px;
+
+    background: url("../images/background.jpg") no-repeat center center/cover;
 }
 
 /* LEFT */
